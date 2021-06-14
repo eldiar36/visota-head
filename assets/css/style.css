@@ -6,7 +6,6 @@
     font-style: normal;
 }
 * {
-
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
@@ -18,25 +17,20 @@ dl, ol, ul {
     margin: 0;
     padding: 0;
 }
-
 li {
     list-style: none
 }
-
 a, a:hover {
     color: inherit;
     text-decoration: none;
 }
-
 p {
     margin: 0;
 }
-
 img {
     max-width: 100%;
     height: auto;
 }
-
 body {
     overflow-x: hidden;
     font-weight: 400;
@@ -53,7 +47,6 @@ body {
 }
 #header2 .header-top-box .logo-box {
     text-align: center;
-
 }
 #header2 .header-top-box .insta-logo {
     margin-right: 21px;
@@ -250,14 +243,6 @@ body {
 .burger_nav-wrapper .right-nav_box .payments_box svg {
     margin-bottom: 4px;
 }
-.restaurant-card .home-box-wrapper{
-    width: 100%;
-    overflow-x: scroll;
-}
-.restaurant-card .home-box{
-    width: 110%;
-}
-
 .burger-menu .burger-menu_nav .mobile-menu li {
     margin-bottom: 20px;
 }
@@ -312,13 +297,15 @@ body {
 .burger-menu_nav .language a.active{
     color: #f34747;
 }
+.container{
+    padding: 0;
+}
+/*dropdown start*/
 
 #nav .nav__items:hover  .dropdown__content {
     display: block;
 }
-.container{
-    padding: 0;
-}
+
 #nav  .dropdown__content {
     display: none;
     position: absolute;
@@ -415,6 +402,8 @@ body {
 #nav  .dropdown__content .drop__links .drop__links-item.all-ex {
     color: #FF006A;
 }
+
+/*dropdown end*/
 #header2 .nav___menu .nav__items .nav__links.special{
     color: #FF006A;
 }
@@ -660,8 +649,6 @@ body {
     line-height: 21px;
     color: #586175;
 }
-
-
 .burger-menu_mobile{
     position: fixed;
     top: 0;
@@ -705,6 +692,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.burger-menu_mobile .nav_wrapper ul li a.all-ex{
+    color: #FF006A;
 }
 .burger-menu_mobile .second-ul-box{
     padding: 29px 10px 0 17px;
