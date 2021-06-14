@@ -59,9 +59,9 @@ hamburger.addEventListener('click', e => {
 
 document.addEventListener('click', e => {
     let target = e.target;
-    let its_menu = target === mobileDrop || mobileDrop.contains(target);
+    let its_menu = target === menu || menu.contains(target);
     let its_hamburger = target === hamburger;
-    let menu_is_active = mobileDrop.classList.contains('burger-menu_active');
+    let menu_is_active = menu.classList.contains('burger-menu_active');
 
     if (!its_menu && !its_hamburger && menu_is_active) {
         toggleMenu();
@@ -78,9 +78,9 @@ mobileDrop.addEventListener('click', e => {
 
 document.addEventListener('click', e => {
     let target = e.target;
-    let its_menu = target === mobileDrop || mobileDrop.contains(target);
+    let its_menu = target === menu || menu.contains(target);
     let its_hamburger = target === hamburger;
-    let menu_is_active = mobileDrop.classList.contains('mobile-drop_active');
+    let menu_is_active = menu.classList.contains('mobile-drop_active');
 
     if (!its_menu && !its_hamburger && menu_is_active) {
         toggleMenuTwo();

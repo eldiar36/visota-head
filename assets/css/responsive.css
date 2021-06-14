@@ -41,4 +41,7 @@
         top: 20px;
         right: 11px;
     }
+    .burger-menu_mobile{
+        display: block;
+    }
 }
