@@ -74,17 +74,17 @@ body {
     padding-bottom: 8px;
 }
 #header2 .header-top-box .right-box .phone {
-    height: 20px;
+    height: 25px;
 }
 
 .burger-menu {
     display:block;
 }
-.burger-menu_button{
-    width: 20px;
-    height: 17px;
+.burger-menu_button {
+    width: 25px;
+    height: 25px;
     text-align: center;
-    background: url("../img/Vector.svg")no-repeat;
+    background: url('../img/Vector.svg')no-repeat;
     background-size: cover;
 }
 .burger-menu_nav {
