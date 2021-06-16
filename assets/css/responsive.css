@@ -61,6 +61,11 @@
         line-height: 20px;
     }
 }
+@media (min-width: 375px) and (max-height: 800px){
+    .burger-menu_mobile .nav_wrapper ul li {
+        padding: 10px 0;
+    }
+}
 @media (max-width: 350px) {
     .burger-menu_mobile .nav_wrapper {
         padding: 50px 0 0 17px;
