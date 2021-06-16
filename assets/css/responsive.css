@@ -38,7 +38,7 @@
         display: none;
     }
     .burger-menu.burger-menu_active .burger-menu_button.first{
-        top: 20px;
+        top: 25px;
         right: 11px;
     }
     .burger-menu_mobile{

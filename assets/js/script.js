@@ -43,7 +43,6 @@ $(document).ready(function() {
 function functionToHandleWhenMouseEntersTwo() {
     $(this).toggleClass("hover-cl")
 }
-
 function functionToHandleWhenMouseLeavesTwo() {
     $(this).removeClass('hover-cl');
 }
@@ -86,18 +85,10 @@ document.addEventListener('click', e => {
         toggleMenuTwo();
     }
 })
-var uiField = document.getElementsByClassName('ui-field')[0];
-var uiPrompt = document.getElementsByClassName('input-prompt')[0];
-var inputWrap = document.getElementsByClassName('input-box')[0];
-uiField.addEventListener('keyup', function () {
+$('.ui-field').focus(function(){
 
-    if (uiField.value.length >= 1) {
-        uiField.classList.add('active');
-        uiPrompt.classList.add('active');
-        inputWrap.classList.add('active');
-    }else{
-        uiField.classList.remove('active');
-        uiPrompt.classList.remove('active');
-        inputWrap.classList.remove('active');
-    }
-})
+    $('.ui-field').parent().addClass('active');
+
+
+});
+

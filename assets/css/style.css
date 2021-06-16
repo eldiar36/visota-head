@@ -98,7 +98,7 @@ body {
     padding: 181px 0 70px 0;
     width: 100%;
     height: 100vh;
-    z-index: 999;
+    z-index: 9999;
     overflow-y: auto;
     left: -200%;
     top: 0;
@@ -108,6 +108,9 @@ body {
     left: 0;
     opacity: 1;
 }
+#header2 .container{
+    position: relative;
+}
 .burger-menu.burger-menu_active .burger-menu_button{
     background: url("../img/close.svg")no-repeat;
     background-size: cover;
@@ -116,8 +119,8 @@ body {
     text-align: right;
     z-index: 9999999;
     position: absolute;
-    top: 48px;
-    right: 12px;
+
+    right: 0
 }
 .burger_nav-wrapper {
     display: flex;
@@ -175,6 +178,7 @@ body {
     line-height: 26px;
     color: #FF006A;
     cursor: pointer;
+    background: none;
 }
 .burger-menu_nav .burger_nav-numbers .bn_number{
     font-family: 'Bebas Neue',sans-serif;
@@ -199,14 +203,22 @@ body {
     font-size: 24px;
     font-weight: 700;
     line-height: 30px;
+    transition: .3s ease-in;
+    color: #586175;
 }
-
+.burger_nav-wrapper .ul_nav-links li .menu_links:hover{
+    color:  #FF006A;
+}
 .burger_nav-wrapper .ul_nav-links ul li  .sub_menu-wrap .sub_menu_links a {
     font-size: 13px;
     font-weight: 500;
     line-height: 26px;
     color: #586175;
-
+    transition: .4s ease-in;
+}
+.burger_nav-wrapper .ul_nav-links ul li  .sub_menu-wrap .sub_menu_links a:hover,
+.burger_nav-wrapper .right-nav_box ul .second_menu_items a:hover{
+    color: #FF006A;
 }
 .burger_nav-wrapper .ul_nav-links ul li  .sub_menu-wrap .sub_menu_links a.all-ex {
     font-weight: 900;
@@ -226,13 +238,13 @@ body {
     font-size: 13px;
     font-weight: 500;
     line-height: 26px;
-
+transition: .4s ease-in;
 }
 .burger_nav-wrapper .right-nav_box .payments_box{
     margin-top: 66px;
 }
 .burger_nav-wrapper .right-nav_box .payments_box .box {
-    width: 173px;
+    width: 167px;
     height: 60px;
     border: 1px solid #000000;
     border-radius: 8px;
@@ -240,6 +252,7 @@ body {
     margin-bottom: 10px;
     justify-content: center;
 }
+
 .burger_nav-wrapper .right-nav_box .payments_box svg {
     margin-bottom: 4px;
 }
@@ -307,10 +320,10 @@ body {
 }
 
 #nav  .dropdown__content {
-    display: none;
+    display:none;
     position: absolute;
     left: 0;
-    top: 50px;
+    top: 46px;
     background: #F1F1F3;
     width: 100%;
     transition: .3s ease-out;
@@ -318,7 +331,7 @@ body {
 }
 #nav .drop__box {
     display: grid;
-    grid-template-columns: 0 240px 900px;
+    grid-template-columns: 0 231px 900px;
 }
 #nav .drop__links_content .ex-box{
     text-align: end;
@@ -332,15 +345,47 @@ body {
     padding-bottom: 29px;
     transition: .5s linear;
     overflow: hidden;
+
+}
+#nav .drop__links-item .drop__links_content .ex-box{
+    display: block;
+    position: relative;
+}
+#nav .drop__links-item .drop__links_content .ex-box .web-link{
+   display: block;
 }
 #nav .drop__links-item .drop__links_content img {
     height: 180px;
-    max-width: 300px;
+    width: 303px;
+    object-fit: cover;
+}
+.img-scale-box {
+    display: inline-block;
+    overflow: hidden;
+}
+.img-scale-box  img {
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+    /* Время эффекта */
+    display: block;
+    /* Убираем небольшой отступ снизу */
+}
+
+.img-scale-box  img:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    /* Увеличиваем масштаб */
 }
 #nav .drop__links-item .drop__links_content .text-info {
     padding: 0 8px 0 13px;
     text-align: left;
 
+}
+
+#nav .drop__links-item .drop__links_content .ex-box:hover .name-ex{
+    color: #FF006A;
 }
 #nav .drop__links-item .drop__links_content .name-ex {
     font-weight: bold;
@@ -350,6 +395,7 @@ body {
     text-transform: initial;
     margin: 10px 0 0 0;
     letter-spacing: 0;
+    transition: .3s ease-in;
 }
 #nav .drop__links-item .drop__links_content .options{
     display: flex;
@@ -378,10 +424,10 @@ body {
 }
 #nav .drop__links-item.active .drop__links_content{
     opacity: 1;
-    z-index: 10000;
+    z-index: 99999;
 }
 #nav .drop-links-wrapper{
-    padding: 30px 0 30px 25px;
+    padding: 30px 0 40px 25px;
 }
 #nav  .dropdown__content .drop__links  {
     display: flex;
@@ -392,13 +438,61 @@ body {
 #nav  .dropdown__content .drop__links .drop__links-item{
     font-weight: 500;
     font-size: 13px;
+    display: block;
     line-height: 20px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: #586175;
     width: 100%;
     transition: .5s linear;
+
 }
+#nav  .dropdown__content .drop__links .drop__links-item .drop_links-link{
+    position: relative;
+    z-index: 1000;
+    display: block;
+    width: 100%;
+}
+#nav  .dropdown__content .drop__links .drop__links-item .drop_links-link span{
+    z-index: 1000;
+    padding-right: 20px;
+    position: relative;
+    background: #F1F1F3;
+}
+#nav  .dropdown__content .drop__links .drop__links-item .drop_links-link:before,
+#nav  .dropdown__content .drop__links .drop__links-item .drop_links-link:after{
+    content: "";
+    display: block;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    margin-top: -.5px;
+    -webkit-transition: width,0.3s ease-in-out;
+    -o-transition: width,0.3s ease-in-out;
+    transition: width,0.3s ease-in-out;
+}
+#nav  .dropdown__content .drop__links .drop__links-item .drop_links-link:before{
+    background-color: #080810;
+    width: 0;
+    left: 0;
+    z-index: 10;
+    position: absolute;
+
+}
+#nav  .dropdown__content .drop__links .drop__links-item .drop_links-link:after{
+    width: 0;
+    background-color: #fff;
+    left: 0;
+    z-index: 1;
+    position: absolute;
+}
+#nav  .dropdown__content .drop__links .drop__links-item .drop_links-link:hover:before{
+    width: calc(100% );
+}
+#nav  .dropdown__content .drop__links .drop__links-item .drop_links-link:hover:after{
+    width: calc(100% );
+}
+
 #nav  .dropdown__content .drop__links .drop__links-item.all-ex {
     color: #FF006A;
 }
@@ -424,12 +518,19 @@ body {
     font-weight: 500;
     font-size: 13px;
     line-height: 20px;
-
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: #FFFFFF;
+    transition: .4s ease;
+    display: flex;
+    align-items: center;
 }
-
+#header2 .nav___menu .nav__items .nav__links svg {
+    margin-left: 7px;
+}
+#header2 .nav___menu .nav__items .nav__links:hover{
+ color: #B0B7C8;
+}
 .callback-container {
     width: 100%;
     height: 100%;
@@ -608,7 +709,7 @@ body {
     color: #FF006A;
 }
 
-#header2 .header_bottom-box .search-wrapper .input-prompt.active {
+#header2 .header_bottom-box .search-wrapper .input-box.active .input-prompt {
     display: block;
 }
 #header2 .header_bottom-box .search-wrapper input {
@@ -652,13 +753,14 @@ body {
 .burger-menu_mobile{
     position: fixed;
     top: 0;
-    background: #FFFFFF;
+    background: #F1F1F3;
     width: 70%;
     height: 100%;
     right: -200%;
     opacity: 0;
     z-index: 999;
     display: none;
+    transition: .4s ease-out;
 }
 .burger-menu.burger-menu_active .burger-menu_mobile{
     right: 0;
@@ -675,8 +777,8 @@ body {
     top: 20px;
 }
 .burger-menu_mobile .nav_wrapper ul li{
-    padding: 10px 0;
-    border-bottom: 1px solid #FFFFFF;;
+    padding: 15px 0;
+    border-bottom: 1px solid #586175;;
 }
 .burger-menu_mobile .nav_wrapper ul li:last-child{
     border-bottom:none;
@@ -685,7 +787,6 @@ body {
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
-    letter-spacing: 0.08em;
     text-transform: uppercase;
     color: #FFFFFF;
     padding-right: 20px;
@@ -709,7 +810,7 @@ body {
     color: #586175;
 }
 .burger-menu_mobile .recom-box{
-    background: #FFFFFF;
+
     padding: 24px 10px 80px 17px;
     display: flex;
     align-items: center;
@@ -747,7 +848,11 @@ body {
     margin-top: 39px;
 }
 .burger-menu_mobile .mobile-dropdown .drop-box .drop_header{
-
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 26px;
+    text-transform: capitalize;
+    color: #FFFFFF;
 }
 .burger-menu_mobile .mobile-dropdown .drop-bottom .back-link {
     margin-bottom: 125px;
@@ -758,11 +863,13 @@ body {
     align-items: center;
     justify-content: flex-start;
     color: #FF006A;
+    text-transform: lowercase;
+    padding-left: 20px;
 }
 .burger-menu_mobile .mobile-dropdown .drop-bottom .back-link svg {
     margin-right: 8px;
 }
 .burger-menu_mobile .mobile-dropdown .drop-bottom{
-    background: #FFFFFF;
+    background: #F1F1F3;
     padding: 17px 0 83px 0;
 }
