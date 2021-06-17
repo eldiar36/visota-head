@@ -47,6 +47,9 @@
     #header2 .header-top-box .right-box .phone_number_link {
        display: none;
     }
+    .search-box{
+        display: block;
+    }
 }
 
 @media (max-width: 350px) {

@@ -926,4 +926,5 @@ transition: .4s ease-in;
 .search-box {
     margin-right: 20px;
     height: 25px;
+    display: none;
 }
