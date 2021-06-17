@@ -810,6 +810,7 @@ mobile burger
     width: 70%;
     height: auto;
     right: -200%;
+    overflow-x: hidden;
     overflow-y: scroll;
     opacity: 0;
     z-index: 999;
