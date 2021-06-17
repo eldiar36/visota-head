@@ -66,25 +66,35 @@ document.addEventListener('click', e => {
         toggleMenu();
     }
 })
-let mobileDrop = document.querySelector('.mobile-drop-links');
-const toggleMenuTwo = () => {
-    mobileDrop.classList.toggle('mobile-drop_active');
-}
-mobileDrop.addEventListener('click', e => {
-    e.stopPropagation();
-    toggleMenuTwo();
-});
-
-document.addEventListener('click', e => {
-    let target = e.target;
-    let its_menu = target === menu || menu.contains(target);
-    let its_hamburger = target === hamburger;
-    let menu_is_active = menu.classList.contains('mobile-drop_active');
-
-    if (!its_menu && !its_hamburger && menu_is_active) {
-        toggleMenuTwo();
+let mobileDrop = document.querySelectorAll('.mobile-drop-links');
+let BackLink = document.querySelectorAll('.back-link');
+for (let i = 0;i < mobileDrop.length;i++){
+    const toggleMenuTwo = () => {
+        mobileDrop[i].classList.toggle('mobile-drop_active');
     }
-})
+    mobileDrop[i].addEventListener('click', e => {
+        e.stopPropagation();
+        toggleMenuTwo();
+    });
+    for (let i= 0;i > BackLink;i++){
+        BackLink.addEventListener('click', function (){
+            mobileDrop[i].classList.remove('mobile-drop_active');
+        })
+    }
+    document.addEventListener('click', e => {
+        let target = e.target;
+        let its_menu = target === menu || menu.contains(target);
+        let its_hamburger = target === hamburger;
+        let menu_is_active = menu.classList.contains('mobile-drop_active');
+
+        if (!its_menu && !its_hamburger && menu_is_active) {
+            toggleMenuTwo();
+        }
+    })
+
+}
+
+console.log(mobileDrop)
 $('.ui-field').focus(function(){
 
     $('.ui-field').parent().addClass('active');
