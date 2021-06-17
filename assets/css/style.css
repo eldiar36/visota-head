@@ -53,22 +53,60 @@ body {
 }
 #header2 .header-top-box .logo-box {
     text-align: center;
+    padding-top: 12px;
 }
 #header2 .header-top-box .logo-box img {
     width: 162px;
     height: 70px;
 }
 #header2 .header-top-box .insta-logo {
-    margin-right: 21px;
+
+    position: relative;
+
+}
+#header2 .header-top-box .instagram{
+    position: relative;
+    max-width: 25px;
     height: 25px;
+    margin-right: 21px;
+}
+#header2 .header-top-box .instagram:hover .cap{
+    display: flex;
+}
+#header2 .header-top-box .recommend-box:hover .captwo{
+    display: flex;
+}
+#header2 .header-top-box .recommend-box .tr-ad{
+    height: 20px;
+    position: relative;
+}
+#header2 .header-top-box  .cap,
+#header2 .header-top-box  .captwo{
+    background: #F1F1F3;
+    font-weight: 500;
+    padding: 2px 3px;
+    font-size: 8px;
+    line-height: 9px;
+    color: #586175;
+    position: absolute;
+    right: -38px;
+    top: -12px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+#header2 .header-top-box  .captwo{
+    right: -46px;
+    top: -13px;
 }
 #header2 .header-top-box .recommend-box{
     display: flex;
     align-items: flex-end;
 }
-#header2 .header-top-box .recommend-box a {
+#header2 .header-top-box .recommend-box .tr-icon {
     height: 20px;
 }
+
 #header2 .header-top-box .recommend-box span{
     font-weight: 500;
     font-size: 13px;
@@ -89,7 +127,7 @@ body {
     font-size: 20px;
     line-height: 20px;
     font-family: "Bebas Neue", sans-serif;
-    color: #949FBA;
+    color: #586175;
     margin-right: 20px;
 }
 #header2 .header-top-box .right-box .phone {
