@@ -214,6 +214,7 @@ body {
     line-height: 21px;
     letter-spacing: 0;
     display: block;
+    color: #586175;
 }
 .burger_nav-wrapper .ul_nav-links .main_li{
     margin-bottom: 30px;
@@ -262,6 +263,7 @@ body {
     font-weight: 500;
     line-height: 26px;
 transition: .4s ease-in;
+    color: #586175;
 }
 .burger_nav-wrapper .right-nav_box .payments_box{
     margin-top: 66px;
