@@ -54,6 +54,10 @@ body {
 #header2 .header-top-box .logo-box {
     text-align: center;
 }
+#header2 .header-top-box .logo-box img {
+    width: 162px;
+    height: 70px;
+}
 #header2 .header-top-box .insta-logo {
     margin-right: 21px;
     height: 25px;
