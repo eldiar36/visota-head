@@ -269,8 +269,8 @@ transition: .4s ease-in;
     margin-top: 66px;
 }
 .burger_nav-wrapper .right-nav_box .payments_box .box {
-    width: 167px;
-    height: 60px;
+    width: 150px;
+    height: 50px;
     border: 1px solid #000000;
     border-radius: 8px;
     display: flex;
