@@ -363,6 +363,7 @@ transition: .4s ease-in;
     text-align: end;
 }
 #nav .drop__links-item.active .drop__links_content{
+    opacity: 1;
     display: flex;
 }
 #nav .drop__links-item .drop__links_content{
@@ -940,4 +941,8 @@ mobile burger
     margin-right: 20px;
     height: 25px;
     display: none;
+}
+iframe .badge-widget {
+    width: 167px!important;
+    height: 60px!important;
 }
