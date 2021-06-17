@@ -93,12 +93,13 @@ for (let i = 0;i < mobileDrop.length;i++){
     })
 
 }
-
-console.log(mobileDrop)
 $('.ui-field').focus(function(){
-
     $('.ui-field').parent().addClass('active');
-
-
 });
-
+$(document).mouseup(function (e){ // событие клика по веб-документу
+    var uiBox = $(".input-box"); // тут указываем ID элемента
+    if (!uiBox.is(e.target) // если клик был не по нашему блоку
+        && uiBox.has(e.target).length === 0) { // и не по его дочерним элементам
+        uiBox.removeClass('active') // скрываем его
+    }
+});
