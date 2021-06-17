@@ -690,6 +690,9 @@ transition: .4s ease-in;
     text-decoration-line: underline;
     color: #FF006A;
 }
+
+/*нижний бокс*/
+
 #header2 .header_bottom-box {
     padding-top: 15px;
     display: flex;
@@ -796,6 +799,9 @@ transition: .4s ease-in;
     line-height: 21px;
     color: #586175;
 }
+/*
+mobile burger
+*/
 .burger-menu_mobile{
     position: absolute;
     top: 0;
@@ -929,7 +935,7 @@ transition: .4s ease-in;
     background: #F1F1F3;
     padding: 17px 0 83px 0;
 }
-
+/*end*/
 .search-box {
     margin-right: 20px;
     height: 25px;
