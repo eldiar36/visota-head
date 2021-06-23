@@ -50,6 +50,7 @@ body {
     padding-top: 48px;
     padding-bottom: 6px;
     align-items: center;
+    display: flex;
 }
 #header2 .header-top-box .logo-box {
     text-align: center;
